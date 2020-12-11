@@ -40,6 +40,10 @@ define('anilist', ({ data: { options } }) => {
 				return error.message;
 			}
 
+			if (!data) {
+				return 'Unknown error - Check back later.';
+			}
+
 			let { result } = data;
 
 			return {
