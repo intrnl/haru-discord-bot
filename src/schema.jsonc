@@ -1,0 +1,38 @@
+// This is the current command schema that Haru has.
+// Intended as a sort of guide to what is being expected
+{
+	"ping": {
+		"description": "Pong!"
+	},
+	"anilist": {
+		"description": "Search AniList for anime and manga",
+		"options": [
+			{
+				"type": 1,
+				"name": "anime",
+				"description": "Search for anime",
+				"options": [
+					{
+						"type": 3,
+						"name": "query",
+						"description": "Anime search terms",
+						"required": true
+					}
+				]
+			},
+			{
+				"type": 1,
+				"name": "manga",
+				"description": "Search for manga",
+				"options": [
+					{
+						"type": 3,
+						"name": "query",
+						"description": "Manga search terms",
+						"required": true
+					}
+				]
+			}
+		]
+	}
+}
