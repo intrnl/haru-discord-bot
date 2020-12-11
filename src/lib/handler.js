@@ -45,7 +45,7 @@ async function handleRequest (request, key) {
 		return respond({ status: 400, data: { message: 'Not implemented' } });
 	}
 	if (!request.headers.has('x-signature-ed25519') || !request.headers.has('x-signature-timestamp')) {
-		return respond({ status: 400, data: { message: 'Missing signature headers' } });
+		return respond({ status: 401, data: { message: 'Missing signature headers' } });
 	}
 
 	let body = await request.text();
@@ -56,7 +56,7 @@ async function handleRequest (request, key) {
 	let valid = await ed.verify(signature, hash, key);
 
 	if (!valid) {
-		return respond({ status: 400, data: { message: 'Invalid signature' } });
+		return respond({ status: 401, data: { message: 'Invalid signature' } });
 	}
 
 	let interaction = JSON.parse(body);
