@@ -38,7 +38,7 @@ define('anilist', ({ data: { options } }) => {
 		.then(({ data, errors }) => {
 			if (errors?.length) {
 				let error = errors[0];
-				return error.message;
+				return 'AniList error - ' + error.message;
 			}
 
 			if (!data) {
