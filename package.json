@@ -1,0 +1,14 @@
+{
+	"private": true,
+	"main": "dist/worker.js",
+	"scripts": {
+		"build": "esbuild src/index.js --bundle --target=es2020 --outfile=dist/worker.js",
+		"prepush": "pnpm run build",
+		"push": "wrangler publish"
+	},
+	"devDependencies": {
+		"@cloudflare/wrangler": "^1.12.2",
+		"esbuild": "^0.8.21",
+		"node-fetch": "^2.6.1"
+	}
+}

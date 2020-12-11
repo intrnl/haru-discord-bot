@@ -1,0 +1,4 @@
+name = "haru-discord-bot"
+type = "javascript"
+account_id = "26f19e05d0167f653429b3dda6791de1"
+workers_dev = true
