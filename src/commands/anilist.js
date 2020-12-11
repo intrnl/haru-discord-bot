@@ -28,6 +28,7 @@ define('anilist', ({ data: { options } }) => {
 	return fetch(url, {
 		method: 'post',
 		headers: [
+			['user-agent', 'github:intrnl/haru-discord-bot'],
 			['content-type', 'application/json'],
 			['accept', 'application/json'],
 		],
