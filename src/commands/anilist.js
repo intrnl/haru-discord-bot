@@ -1,4 +1,5 @@
 import { define } from '../lib/handler';
+import { parseOptions } from '../lib/utils';
 
 
 let url = 'https://graphql.anilist.co';
@@ -19,11 +20,10 @@ let query = `
 `;
 
 
-define('anilist', ({ data: { options } }) => {
-	let { name: type } = options[0];
-	let { value: search } = options[0].options[0];
-
-	type = type.toUpperCase();
+define('anilist', (interaction) => {
+	let opts = parseOptions(interaction);
+	let type = opts._[1].toUpperCase();
+	let search = opts.query;
 
 	return fetch(url, {
 		method: 'post',
