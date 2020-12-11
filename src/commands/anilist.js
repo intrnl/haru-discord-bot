@@ -104,7 +104,7 @@ define('anilist', (interaction) => {
 								anime.episodesWatched && `${anime.episodesWatched} episodes watched`,
 								manga.count && `${manga.count} manga read`,
 								manga.chaptersRead && `${manga.chaptersRead} chapters read`,
-							].join('\n'),
+							].filter((line) => line).join('\n'),
 							thumbnail: { url: result.cover.large },
 						},
 					],
