@@ -92,7 +92,7 @@ define('anilist', (interaction) => {
 				}
 
 				let { result } = data;
-				let { anime, manga } = data.statistics;
+				let { anime, manga } = result.statistics;
 
 				return {
 					embeds: [
@@ -105,7 +105,8 @@ define('anilist', (interaction) => {
 								manga.count && `${manga.count} manga read`,
 								manga.chaptersRead && `${manga.chaptersRead} chapters read`,
 							].filter((line) => line).join('\n'),
-							thumbnail: { url: result.cover.large },
+							url: result.url,
+							thumbnail: { url: result.avatar.large },
 						},
 					],
 				};
