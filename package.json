@@ -7,8 +7,8 @@
 		"push": "wrangler publish"
 	},
 	"devDependencies": {
-		"@cloudflare/wrangler": "^1.12.2",
-		"esbuild": "^0.8.21",
+		"@cloudflare/wrangler": "^1.12.3",
+		"esbuild": "^0.8.27",
 		"node-fetch": "^2.6.1"
 	}
 }

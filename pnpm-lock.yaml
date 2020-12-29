@@ -1,20 +1,21 @@
 devDependencies:
-  '@cloudflare/wrangler': 1.12.2
-  esbuild: 0.8.21
+  '@cloudflare/wrangler': 1.12.3
+  esbuild: 0.8.27
   node-fetch: 2.6.1
 lockfileVersion: 5.2
 packages:
-  /@cloudflare/wrangler/1.12.2:
+  /@cloudflare/wrangler/1.12.3:
     dependencies:
       binary-install: 0.0.1
     dev: true
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-hovZ0yR8pofMiyIAsxOdKxdU9P33yWcTKuaiOYlwKRAMctB8ghRDeUhYzreAe/Kq6Iu7hdP8lfeub4sUHQxe4Q==
+      integrity: sha512-p1roGAuaxiXPmUG/m2qiaFfwxW5b7e4P5cw9jpWvKz2i+GyWxxyIdytX898kJorXPq5RnoypdHB9yjEjTNB0uA==
   /axios/0.19.2:
     dependencies:
       follow-redirects: 1.5.10
+    deprecated: 'Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410'
     dev: true
     resolution:
       integrity: sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
@@ -60,12 +61,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-6u0VYSCo/OW6IoD5WCLLy9JUGARbamfSavcNXry/eu8aHVFei6CD3Sw+VGX5alea1i9pgPHW0mbu6Xj0uBh7gA==
-  /esbuild/0.8.21:
+  /esbuild/0.8.27:
     dev: true
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-vRRx5MZmiekw2R7jK5BppvBUFCJA0Zkl0wYxrDmyUvMPBcQC/xJvxJUM4R+Hgjgb3gp5P1W655AsuoqDeQQDVw==
+      integrity: sha512-cY2i08EHYHNg0o748J+X0yBTcCO7DIZSxLWJ/6OymmML0Y2X6qkINfZcoiq5GE6EcLIfwyaZpI60JY6iBJWj5w==
   /follow-redirects/1.5.10:
     dependencies:
       debug: 3.1.0
@@ -236,6 +237,6 @@ packages:
     resolution:
       integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 specifiers:
-  '@cloudflare/wrangler': ^1.12.2
-  esbuild: ^0.8.21
+  '@cloudflare/wrangler': ^1.12.3
+  esbuild: ^0.8.27
   node-fetch: ^2.6.1
