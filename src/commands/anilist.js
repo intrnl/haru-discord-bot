@@ -117,7 +117,7 @@ define('anilist', (interaction) => {
 
 function prune (str) {
 	return str
-		.replace(/<br>|<\/?[bi]>/gi, '')
+		.replace(/<br>|<\/?[bi]>/gi, '');
 }
 
 function trim (str, max) {
