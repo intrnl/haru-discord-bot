@@ -15,6 +15,7 @@ serverless functions such as [Cloudflare Workers][2]
     given that it is a "requirement" according to Discord API docs, let's just
     hope that Discord devs would change their minds anytime soon.
 
+![Historical graph for CPU time](https://cdn.discordapp.com/attachments/335095954082365441/787006742621454357/unknown.png)
 
 [1]: https://github.com/discord/discord-api-docs/blob/feature/interactions/docs/interactions/Slash_Commands.md
 [2]: https://workers.cloudflare.com/
