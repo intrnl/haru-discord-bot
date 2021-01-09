@@ -6,11 +6,10 @@ serverless functions such as [Cloudflare Workers][2]
 ## To-dos
 
 - Figure out the legality of hosting a bot like this on Cloudflare Workers
-  - With signature verification, it takes around 55 ms to 160 ms for each
-    request. Let alone the free tier, this is way beyond the "allowed" CPU time
-    for the paid Bundled tier.
-  - I had assumed that Cloudflare Workers would just kill any workers that goes
-    beyond the allowed CPU time, but this hasn't happened.
+  - With signature verification, it takes up to 160 ms for each request. Let
+    alone the free tier, this is way beyond the "allowed" CPU time for the paid
+    Bundled tier. I had assumed that it would just kill the worker if it goes
+    beyond the allowed time, but this hasn't happened.
   - Without signature verification, it takes around 5 ms, making it doable, but
     given that it is a "requirement" according to Discord API docs, let's just
     hope that Discord devs would change their minds anytime soon.
