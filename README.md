@@ -13,9 +13,10 @@ serverless functions such as [Cloudflare Workers][2]
     - Alternatively, it's because the CPU time limit rolls over to the next
       request. Because some of the requests doesn't always reach 10 ms, it
       rolls over to the heavy requests.
-      - This is in line with the [documentation regarding CPU time limit][3]
+      - This is in line with the [documentation regarding CPU time limit][3].
       - This might be more reasonable, but odd since the first request (on the
-        next day) would take 50-160 ms, so what is there to rollover?
+        next day, where the limit has been reset) would take 20-160 ms on
+        average, so what is there to rollover?
   - With signature verification, it takes up to 160 ms for each request. Let
     alone the free tier, this is way beyond the "allowed" CPU time for the paid
     Bundled tier. I had assumed that it would just kill the worker if it goes
