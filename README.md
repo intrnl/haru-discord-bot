@@ -6,6 +6,13 @@ serverless functions such as [Cloudflare Workers][2]
 ## To-dos
 
 - Figure out the legality of hosting a bot like this on Cloudflare Workers
+  - **Update: This is fine.**
+    - It might be that the way the CPU time limit works is that it's not per
+      request, but rather you have a giant pool to go through. Which for the
+      free tier, it's 10 ms * 100,000 requests. (per day)
+    - Alternatively, it's because the CPU time limit rolls over to the next
+      request. Because some of the requests doesn't always reach 10 ms, it
+      rolls over to the heavy requests.
   - With signature verification, it takes up to 160 ms for each request. Let
     alone the free tier, this is way beyond the "allowed" CPU time for the paid
     Bundled tier. I had assumed that it would just kill the worker if it goes
